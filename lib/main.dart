@@ -27,30 +27,58 @@ class ListViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: ListView(
-        children: [
-          Card(
-            child: ListTile(
-              title: const Text("Money app screen"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MoneyApp()),
-                );
-              },
-            ),
+        children: const [
+          SizedBox(
+            height: 15,
           ),
-          Card(
-            child: ListTile(
-              title: const Text("Tinder app screen"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const TinderApp()),
-                );
-              },
-            ),
-          ),
+          ListTitle(title: "Aula 07/12"),
+          ListCard(title: "Money app", destiny: MoneyApp()),
+          ListCard(title: "Tinder app", destiny: TinderApp())
         ],
+      ),
+    );
+  }
+}
+
+class ListTitle extends StatelessWidget {
+  final String title;
+  const ListTitle({Key? key, required this.title}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.cyan,
+      width: MediaQuery.of(context).size.width,
+      height: 50,
+      child: Center(
+        child: Text(
+          title,
+          textAlign: TextAlign.center,
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        ),
+      ),
+    );
+  }
+}
+
+class ListCard extends StatelessWidget {
+  final String title;
+  final Widget destiny;
+
+  const ListCard({Key? key, required this.title, required this.destiny})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text(title),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => destiny),
+          );
+        },
       ),
     );
   }
