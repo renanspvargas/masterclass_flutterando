@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:masterclass_flutterando/aulas/aula07_12/money_app.dart';
 import 'package:masterclass_flutterando/aulas/aula07_12/tinder_app.dart';
 
+import 'Components/ListCard.dart';
+
 void main() {
   runApp(const HomePage());
 }
@@ -28,12 +30,10 @@ class ListViewWidget extends StatelessWidget {
     return Material(
       child: ListView(
         children: const [
-          SizedBox(
-            height: 15,
-          ),
           ListTitle(title: "Aula 07/12"),
           ListCard(title: "Money app", destiny: MoneyApp()),
-          ListCard(title: "Tinder app", destiny: TinderApp())
+          ListCard(title: "Tinder app", destiny: TinderApp()),
+          ListTitle(title: "Aula 14/12"),
         ],
       ),
     );
@@ -46,40 +46,22 @@ class ListTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.cyan,
-      width: MediaQuery.of(context).size.width,
-      height: 50,
-      child: Center(
-        child: Text(
-          title,
-          textAlign: TextAlign.center,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+    return Column(
+      children: [
+        SizedBox(height: 15),
+        Container(
+          color: Colors.cyan,
+          width: MediaQuery.of(context).size.width,
+          height: 50,
+          child: Center(
+            child: Text(
+              title,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+          ),
         ),
-      ),
-    );
-  }
-}
-
-class ListCard extends StatelessWidget {
-  final String title;
-  final Widget destiny;
-
-  const ListCard({Key? key, required this.title, required this.destiny})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        title: Text(title),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => destiny),
-          );
-        },
-      ),
+      ],
     );
   }
 }
