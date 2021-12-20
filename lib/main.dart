@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_flutterando/aulas/aula07_12/money_app.dart';
 import 'package:masterclass_flutterando/aulas/aula07_12/tinder_app.dart';
+import 'package:masterclass_flutterando/aulas/aula14_12/exercicio1.dart';
 
 import 'Components/ListCard.dart';
 
@@ -34,6 +35,7 @@ class ListViewWidget extends StatelessWidget {
           ListCard(title: "Money app", destiny: MoneyApp()),
           ListCard(title: "Tinder app", destiny: TinderApp()),
           ListTitle(title: "Aula 14/12"),
+          ListCard(title: "Animated Button", destiny: AnimatedButtonScreen()),
         ],
       ),
     );
