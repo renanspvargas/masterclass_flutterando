@@ -4,7 +4,7 @@ import 'package:masterclass_flutterando/aulas/aula07_12/tinder_app.dart';
 import 'package:masterclass_flutterando/aulas/aula14_12/exercicio1.dart';
 import 'package:masterclass_flutterando/aulas/aula14_12/exercicio2.dart';
 
-import 'Components/ListCard.dart';
+import 'Components/list_card.dart';
 
 void main() {
   runApp(const HomePage());
