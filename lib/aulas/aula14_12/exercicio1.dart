@@ -57,36 +57,3 @@ class _AnimatedButtonState extends State<AnimatedButton> {
     );
   }
 }
-
-class RoundedButtonWidget extends StatefulWidget {
-  const RoundedButtonWidget({Key? key}) : super(key: key);
-
-  @override
-  _RoundedButtonWidgetState createState() => _RoundedButtonWidgetState();
-}
-
-class _RoundedButtonWidgetState extends State<RoundedButtonWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      child: Text(""),
-      onPressed: () {},
-    );
-  }
-}
-
-class SquareButtonWidget extends StatefulWidget {
-  const SquareButtonWidget({Key? key}) : super(key: key);
-
-  @override
-  _SquareButtonWidgetState createState() => _SquareButtonWidgetState();
-}
-
-class _SquareButtonWidgetState extends State<SquareButtonWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return FloatingActionButton(
-      onPressed: () {},
-    );
-  }
-}
