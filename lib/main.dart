@@ -36,9 +36,11 @@ class ListViewWidget extends StatelessWidget {
           ListCard(title: "Money app", destiny: MoneyApp()),
           ListCard(title: "Tinder app", destiny: TinderApp()),
           ListTitle(title: "Aula 14/12"),
-          ListCard(title: "Animated Button", destiny: AnimatedButtonScreen()),
           ListCard(
-              title: "Animated Expansion Tile",
+              title: "(implicit) Animated Button",
+              destiny: AnimatedButtonScreen()),
+          ListCard(
+              title: "(implicit) Animated Expansion Tile",
               destiny: AnimatedExpansionTile()),
         ],
       ),
