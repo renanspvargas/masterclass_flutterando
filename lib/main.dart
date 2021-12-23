@@ -3,6 +3,7 @@ import 'package:masterclass_flutterando/aulas/aula07_12/money_app.dart';
 import 'package:masterclass_flutterando/aulas/aula07_12/tinder_app.dart';
 import 'package:masterclass_flutterando/aulas/aula14_12/exercicio1.dart';
 import 'package:masterclass_flutterando/aulas/aula14_12/exercicio2.dart';
+import 'package:masterclass_flutterando/aulas/aula14_12/exercicio3.dart';
 
 import 'Components/list_card.dart';
 
@@ -42,6 +43,9 @@ class ListViewWidget extends StatelessWidget {
           ListCard(
               title: "(implicit) Animated Expansion Tile",
               destiny: AnimatedExpansionTile()),
+          ListCard(
+              title: "(controlled) Animated Button",
+              destiny: ControlledAnimationButtonScreen())
         ],
       ),
     );
